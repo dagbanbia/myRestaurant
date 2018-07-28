@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Restaurant reviews project for Udacity's Front End Web Developer Nanodegree program.">
+
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Restaurant Reviews</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1><a href="/">Restaurant Reviews </a></h1>
+      </nav>
+    </header>
+
+    <main id="maincontent">
+      <!-- Contain Map -->
+      <section id="map-container" tabindex="-1">
+        <div id="map" role="application" aria-label="Map with restaurants"></div>
+      </section>
+
+      <!-- DETAILS SECTION -->
+      <section>
+        <!-- filters -->
+        <div class="filter-options">
+          <h2>Filter Results</h2>
+
+          <select id="neighborhoods-select" tabindex="0" name="neighborhoods" onchange="updateRestaurants()" aria-label="All Neighborhoods">
+            <option value="all">All Neighborhoods</option>
+          </select>
+
+          <select id="cuisines-select" tabindex="0" name="cuisines" onchange="updateRestaurants()" aria-label="All Cuisines">
+            <option value="all">All Cuisines</option>
+          </select>
+
+        </div>
+        <!-- restaurant list -->
+        <ul id="restaurants-list"></ul>
+      </section>
+    </main>
+
+    <script type="application/javascript" src="js/dbhelper.js"></script>
+    <script type="application/javascript" src="js/main.js"></script>
+    <script type="application/javascript" src="sw.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANA7mcEW2RyRmbahaFIYd5MaSUII6blMI&libraries=places&callback=initMap"></script>
+
+    <footer id="footer">
+      Copyright (c) 2018 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    </footer>
+
+  </body>
+
+</html>
