@@ -8,7 +8,7 @@
  */
 let urlToCache = [
     '/',
-    // '/index.html',
+    '/index.html',
     '/restaurant.html',
     '/css/styles.css',
     '/data/restaurants.json',
